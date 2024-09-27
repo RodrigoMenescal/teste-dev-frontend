@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>Cadastro</h2>
+  <form (ngSubmit)="onSubmit()" #cadastroForm="ngForm">
+    <!-- Campo Nome -->
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        class="form-control"
+        [formControl]="pessoaForm.controls.nome"
+      />
+    </div>
+
+    <!-- Campo Telefone -->
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input
+        type="text"
+        id="telefone"
+        name="telefone"
+        class="form-control"
+        mask="(00) 0 0000-0000"
+        [formControl]="pessoaForm.controls.telefone"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary flex-column float-end">
+      Salvar
+    </button>
+  </form>
+</div>
